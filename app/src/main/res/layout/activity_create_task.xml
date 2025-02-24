@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CreateTaskActivity">
+
+    <!-- Image at the top before the form -->
+    <ImageView
+        android:id="@+id/taskImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img1"
+    android:contentDescription="Task Image"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Heading: Create Your Task -->
+    <TextView
+        android:id="@+id/createTaskHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Your Task"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/taskImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Task Name -->
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Task Name"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:importantForAccessibility="yes"
+        android:minHeight="48dp"
+        android:elevation="4dp"
+        android:textColorHint="#808080"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/createTaskHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Task Date (Calendar Picker) -->
+    <EditText
+        android:id="@+id/taskDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Date"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:importantForAccessibility="yes"
+        android:focusable="false"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:elevation="4dp"
+        android:textColorHint="#808080"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/taskName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Task Time (Time Picker) -->
+    <EditText
+        android:id="@+id/taskTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Time"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:importantForAccessibility="yes"
+        android:focusable="false"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:elevation="4dp"
+        android:textColorHint="#808080"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/taskDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Create Button -->
+    <Button
+        android:id="@+id/createTaskButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Create Task"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:backgroundTint="#6A0DAD"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button_background"
+        android:elevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/taskTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:backgroundTint="#D32F2F"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button_background"
+        android:elevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/createTaskButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

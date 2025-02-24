@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Heading: TaskMate -->
+    <TextView
+        android:id="@+id/taskMateHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TaskMate"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#6A0DAD"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:contentDescription="Heading: TaskMate" />
+
+    <!-- Subtitle: Make your day easier -->
+    <TextView
+        android:id="@+id/taskMateSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make your day easier"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:contentDescription="Subtitle: Make your day easier" />
+
+    <!-- ImageView: Image placed between subtitle and buttons -->
+    <ImageView
+        android:id="@+id/taskMateImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/img_2"
+    android:contentDescription="Illustrative image for TaskMate" />
+
+    <!-- Grid Layout for buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <!-- Create Task Button -->
+        <Button
+            android:id="@+id/createTaskButton"
+            android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="16dp"
+        android:text="Create Task"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button_purple"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:contentDescription="Create a new task" />
+
+        <!-- View My Tasks Button -->
+        <Button
+            android:id="@+id/viewTasksButton"
+            android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="View My Tasks"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button_light_purple"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:contentDescription="View the tasks you have created" />
+    </LinearLayout>
+
+    <!-- Back Button with Arrow -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="@drawable/ic_back_arrow"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Go back to the previous screen" />
+
+    <!-- Horizontal Thick Line below the Back Button -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#6A0DAD"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Task List Heading -->
+    <TextView
+        android:id="@+id/taskListHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Task List"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Heading: My Task List" />
+
+    <!-- Scrollable container for displaying tasks -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Scrollable area containing the task list">
+
+        <LinearLayout
+            android:id="@+id/tasksContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

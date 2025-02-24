@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Project03</string>
+    <string name="description">This Task Management app Helps you to do your
+        day-today task easier than you think!!</string>
+    <string name="heading">TaskMate</string>
+    <string name="heading2">Make your day easy</string>
+</resources>
